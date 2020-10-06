@@ -18,7 +18,7 @@ require (
 	github.com/hashicorp/go-hclog v0.0.0-20180709165350-ff2cf002a8dd
 	github.com/hashicorp/go-plugin v0.0.0-20190610192547-a1bc61569a26
 	github.com/joho/godotenv v1.3.0
-	github.com/kubernetes-csi/external-snapshotter/v2 v2.2.0-rc1
+	github.com/kubernetes-csi/external-snapshotter/client/v2 v2.2.0-rc3
 	github.com/onsi/ginkgo v1.13.0
 	github.com/onsi/gomega v1.10.1
 	github.com/pkg/errors v0.9.1
@@ -33,11 +33,11 @@ require (
 	google.golang.org/genproto v0.0.0-20200731012542-8145dea6a485 // indirect
 	google.golang.org/grpc v1.31.0
 	google.golang.org/protobuf v1.25.0 // indirect
-	k8s.io/api v0.18.4
+	k8s.io/api v0.19.0-rc.2
 	k8s.io/apiextensions-apiserver v0.18.4
-	k8s.io/apimachinery v0.18.4
+	k8s.io/apimachinery v0.19.0-rc.2
 	k8s.io/cli-runtime v0.18.4
-	k8s.io/client-go v0.18.4
+	k8s.io/client-go v0.19.0-rc.2
 	k8s.io/klog v1.0.0
 	sigs.k8s.io/cluster-api v0.3.8
 	sigs.k8s.io/controller-runtime v0.6.1
