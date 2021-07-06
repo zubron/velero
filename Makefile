@@ -129,6 +129,7 @@ local: build-dirs
 	GOOS=$(GOOS) \
 	GOARCH=$(GOARCH) \
 	VERSION=$(VERSION) \
+	REGISTRY=$(REGISTRY) \
 	PKG=$(PKG) \
 	BIN=$(BIN) \
 	GIT_SHA=$(GIT_SHA) \
@@ -144,6 +145,7 @@ _output/bin/$(GOOS)/$(GOARCH)/$(BIN): build-dirs
 		GOOS=$(GOOS) \
 		GOARCH=$(GOARCH) \
 		VERSION=$(VERSION) \
+		REGISTRY=$(REGISTRY) \
 		PKG=$(PKG) \
 		BIN=$(BIN) \
 		GIT_SHA=$(GIT_SHA) \
@@ -186,6 +188,7 @@ endif
 	--build-arg=VERSION=$(VERSION) \
 	--build-arg=GIT_SHA=$(GIT_SHA) \
 	--build-arg=GIT_TREE_STATE=$(GIT_TREE_STATE) \
+	--build-arg=REGISTRY=$(REGISTRY) \
 	-f $(VELERO_DOCKERFILE) .
 
 container:
@@ -201,6 +204,7 @@ endif
 	--build-arg=VERSION=$(VERSION) \
 	--build-arg=GIT_SHA=$(GIT_SHA) \
 	--build-arg=GIT_TREE_STATE=$(GIT_TREE_STATE) \
+	--build-arg=REGISTRY=$(REGISTRY) \
 	--build-arg=RESTIC_VERSION=$(RESTIC_VERSION) \
 	-f $(VELERO_DOCKERFILE) .
 	@echo "container: $(IMAGE):$(VERSION)"
